@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping of sections for smaller screens */
+}
+
+.left-section {
+    flex: 1;
+    max-width: 400px;
+}
+
+.left-section img {
+    width: 100%;
+    max-width: 100%; /* Ensure the image is fully responsive */
+}
+
+.right-section {
+    flex: 1;
+    padding: 2rem;
+    max-width: 400px;
+}
+
+.right-section h1 {
+    color: #333;
+    font-size: 34px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#signup-form label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#signup-form input[type="text"],
+#signup-form input[type="email"],
+#signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.role-selection {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+    align-items: center;
+    gap: 20px;
+}
+
+.role-selection label {
+    font-size: 30px;
+}
+
+.create-account {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-text {
+    font-size: 14px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.social-login {
+    text-align: center;
+}
+
+.btn-flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.social-login p {
+    margin: 10px 0;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgb(242, 242, 242);
+}
+
+.social-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section, .right-section {
+        flex: 1 100%;
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .right-section h1 {
+        font-size: 28px;
+    }
+
+    .role-selection {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .right-section h1 {
+        font-size: 24px;
+    }
+
+    .role-selection label {
+        font-size: 24px;
+    }
+    .role-selection{
+        display: block;
+    }
+    .create-account {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .login-text {
+        font-size: 12px;
+    }
+
+    .social-button {
+        font-size: 10px;
+        padding: 8px;
+    }
+}
