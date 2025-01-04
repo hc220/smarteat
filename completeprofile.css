@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.profile-image-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+}
+
+form {
+    text-align: left;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="file"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#cancel-btn {
+    background: #f8f9fa;
+    color: #02B47B;
+    border: 0.5px solid #02B47B;
+}
+
+#save-btn {
+    background: #02B47B;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+.drop {
+    display: flex;
+    gap: 20px;
+}
+
+.drop .form-row {
+    flex: 1; /* Ensure equal width for both dropdowns */
+    display: flex;
+    flex-direction: column;
+}
+
+.drop label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.drop select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.drop select:focus {
+    border-color: #007bff;
+    outline: none;
+}
