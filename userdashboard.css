@@ -1,0 +1,618 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    background-color: #1abc9c;
+}
+
+/* Sidebar Styling */
+.slider {
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    width: 200px;
+    height: 100%;
+    /* Full-height based on the parent */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.main {
+    height: inherit;
+}
+
+/* User Profile Section */
+.userprofile {
+    display: flex;
+    flex-direction: row;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center content horizontally */
+    gap: 10px;
+    /* Space between the image and the text */
+}
+
+.userprofile img {
+    width: 48px;
+    /* Set a fixed width for the image */
+    height: 48px;
+    /* Set a fixed height for the image */
+    border-radius: 50%;
+    /* Make the image circular */
+    object-fit: cover;
+    /* Ensure proper cropping without distortion */
+    border: 2px solid #fff;
+    /* Optional: Add a white border around the image */
+}
+
+.userprofile p {
+    font-size: 16px;
+    /* Set font size for the greeting text */
+    color: #fff;
+    /* Text color */
+    margin: 0;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+}
+
+.userprofile p span#username {
+    font-weight: bold;
+}
+
+/* Navigation Section */
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation .menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+    /* Ensure submenu is positioned relative to this item */
+}
+
+.navigation .menu-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.navigation a:hover {
+    color: #2ecc71;
+}
+
+/* Menu Item Styling */
+.menu-item {
+    display: block;
+    align-items: center;
+    margin: 15px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 2%;
+    transition: color 0.3s ease, padding-left 0.3s ease, background-color 0.3s ease;
+}
+
+/* Show submenu when the parent menu item is hovered */
+.menu-item:hover {
+    color: rgb(227, 227, 227);
+    padding-left: 10px;
+    /* Add space on hover */
+    background-color: rgba(36, 34, 32, 0.04);
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #fff;
+    /* Change background color on hover */
+}
+
+/* Submenu Styling - Positioned to the right of the parent */
+.submenu {
+    display: none;
+    position: absolute;
+    /* Position it relative to the parent menu item */
+    top: 120%;
+    /* Position the submenu directly below the parent */
+    left: 0;
+    /* Align it to the left of the parent menu */
+    background-color: #16a085;
+    width: 180px;
+    /* Adjust the width of the submenu */
+    border-radius: 5px;
+    z-index: 10;
+    /* Ensure it appears above other content */
+    margin: 0;
+    /* Reset any margin for consistent positioning */
+    padding: 0;
+    /* Optional: Adjust padding if needed */
+}
+
+
+.menu-item:hover>.submenu {
+    display: block;
+    /* Show submenu when parent is hovered */
+}
+
+/* Submenu Items */
+.submenu a {
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 2px 3px;
+    transition: background-color 0.3s ease;
+}
+
+.submenu a:hover {
+    background-color: #1abc9c;
+}
+
+.consultation-history {
+    color: white;
+    width: 100%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.consultation-history h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#consultation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+#consultation-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#consultation-list li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.start-section {
+    background: white;
+    color: #30c48d;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.start-section p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.add-plan-btn {
+    margin-top: 10px;
+    background-color: #ff8c42;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-plan-btn:hover {
+    background-color: #e67e33;
+}
+
+
+/* Menu Section Styling */
+.menu-section {
+    margin-top: 20px;
+    flex-grow: 1;
+    /* Allow menu section to grow */
+}
+
+.menu-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Icon Styling */
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+/* Active Submenu */
+.submenu.open {
+    display: flex;
+    animation: slideDown 0.5s ease-out;
+    padding: 2% 1%;
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+
+    to {
+        max-height: 300px;
+        /* Adjust according to content */
+    }
+}
+
+
+/* Main Section Styling */
+.main {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.main .section {
+    margin-bottom: 30px;
+}
+
+.booking-container {
+    display: flex;
+    width: 900px;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Doctor Profile Section */
+.doctor-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #fff;
+    height: inherit;
+}
+
+.profile-buttons button {
+    padding: 10px;
+    background: #F0F0F0;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s ease;
+    width: 40px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-buttons button:hover {
+    background: #388e3c;
+    color: white;
+}
+
+#doctor-display {
+    height: 80%;
+    margin: 0% 1%;
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#doctor-display img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+#doctor-display h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #000000;
+}
+
+#doctor-display h5 {
+    color: #2a8145;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+#doctor-display p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.book-now {
+    width: 70%;
+    height: 10%;
+    background: #388e3c;
+    border: 0px solid white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+#calendar-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+#calendar-container div {
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 5px;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#calendar-container .calendar-day.available:hover {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#calendar-container .calendar-day.holiday {
+    background-color: #4caf50;
+    color: white;
+}
+
+#calendar-container .calendar-day.selected {
+    background-color: #f443369a;
+    color: white;
+    font-weight: bold;
+}
+
+.total-cost {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+}
+
+.total-cost p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.holiday {
+    background-color: red;
+    color: white;
+    pointer-events: none;
+}
+
+.active {
+    background-color: green;
+    color: white;
+}
+
+.meal-plan-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.meal-plan-container h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.meal-plan {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.meal-plan::-webkit-scrollbar {
+    height: 8px;
+}
+
+.meal-plan::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 10px;
+}
+
+.meal-plan::-webkit-scrollbar-thumb:hover {
+    background-color: #888888;
+}
+
+.meal-card {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.meal-card h2 {
+    font-size: 20px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.meal-card p {
+    font-size: 14px;
+    color: #6a6a6a;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.meal-card .buttons {
+    display: flex;
+    justify-content: right;
+}
+
+.meal-card button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    margin: 0% 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.meal-card .edit-btn {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+.meal-card .remove-btn {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+.meal-card button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        /* Stack content vertically on smaller screens */
+    }
+
+    .slider {
+        width: 100%;
+        /* Full width for smaller screens */
+        height: auto;
+        /* Adjust height automatically */
+    }
+
+    .main {
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .booking-container {
+        flex-direction: column;
+        /* Stack elements vertically */
+        width: 100%;
+        padding: 1%;
+    }
+
+    .meal-plan-container {
+        justify-content: center;
+        /* Center align meal plans */
+        gap: 10px;
+    }
+
+    .meal-card {
+        width: 100%;
+        /* Full width for meal cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        display: none;
+        /* Hide sidebar on mobile */
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    .doctor-profile {
+        flex-direction: row;
+        /* Stack elements vertically */
+        text-align: center;
+    }
+
+    #doctor-display {
+        margin: 10px 0;
+    }
+
+    #calendar-container {
+        grid-template-columns: repeat(4, 1fr);
+        /* Reduce columns for calendar */
+    }
+}
+
+@media (max-width: 480px) {
+    .userprofile img {
+        width: 36px;
+        /* Smaller profile image */
+        height: 36px;
+    }
+
+    .userprofile p {
+        font-size: 14px;
+        /* Adjust font size */
+    }
+
+    //
+    .book-now {
+        width: 90%;
+        /* Adjust width */
+        height: auto;
+        /* Flexible height */
+    }
+
+    #calendar-container div {
+        padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    }
+
+    #calendar-container {
+        grid-template-columns: repeat(3, 1fr);
+        /* Fewer columns on very small screens */
+    }
+}

@@ -1,5 +1,5 @@
 // JavaScript for dynamic content fetching
-document.getElementById('fetchDataBtn').addEventListener('click', () => {
+/*document.getElementById('fetchDataBtn').addEventListener('click', () => {
     fetch('data.json')
       .then((response) => {
         if (!response.ok) {
@@ -26,5 +26,6 @@ document.getElementById('fetchDataBtn').addEventListener('click', () => {
         const dynamicContent = document.getElementById('dynamicContent');
         dynamicContent.innerHTML = `<p class="text-danger">Failed to load data. Please try again later.</p>`;
       });
-  });
-  
+  }); */
+
+ 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="userdashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <div class="slider">
+            <!-- User Profile Section -->
+            <div class="userprofile" id="user-profile">
+                <img src="path-to-user-image.jpg"   alt="User Profile" class="profile-img" /> 
+                <p class="greeting">Hi,  <span id="username">User</span></p>
+            </div>
+        
+         <!-- Navigation Section -->
+<nav class="navigation">
+    <h3>Main</h3>
+    <ul>
+        <li class="menu-item" id="dashboard-menu">
+            <img src="./01.png" alt="Dashboard Icon" class="menu-icon" />
+            <a href="#dashboard">Dashboard</a>
+            <ul class="submenu">
+                <li class="submenu-item"><a href="#activity">Activity</a></li>
+                <li class="submenu-item"><a href="#meal-plan">Meal Plan</a></li>
+                <li class="submenu-item"><a href="#progress-tracker">Progress Tracker</a></li>
+            </ul>
+        </li>
+
+        <li class="menu-item">
+            <img src="./02.png" alt="Invoices Icon" class="menu-icon" />
+            <a href="#invoices">Invoices</a>
+        </li>
+        <li class="menu-item">
+            <img src="./04.png" alt="Notification Icon" class="menu-icon" />
+            <a href="#notification">Notification</a>
+        </li>
+    </ul>
+</nav>
+
+        
+            <!-- Consultation History Section -->
+            <div class="consultation-history">
+                <h3>Your Consultation</h3>
+                <ul id="consultation-list">
+                    <!-- Dynamically populated list -->
+                </ul>
+                <div class="start-section">
+                    <p>Let's start!</p>
+                    <p>Your Healthy Journey with Meal Plan</p>
+                    <button class="add-plan-btn">+ Add New Plans</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="main">
+            <h2 style="text-transform: capitalize;">Activity</h2>
+            <div class="section activity">
+                <div class="booking-container">
+                    <!-- Doctor Profile Section -->
+                    <div class="doctor-profile">
+                        <div class="profile-buttons">
+                            <button id="prev-doctor">&lt;</button>
+                        </div>
+                        <div id="doctor-display">
+                            <!-- Doctor data will be injected here dynamically -->
+                        </div>
+                        <div class="profile-buttons">
+                            <button id="next-doctor">&gt;</button>
+                        </div>
+                    </div>
+
+                    <!-- Calendar Section -->
+                    <div class="calendar-section">
+                        <h3 style="text-align: center;">Online Booking</h3>
+                        <div id="calendar-container">
+                            <!-- Calendar will be loaded dynamically -->
+                        </div>
+                        <div class="total-cost">
+                            <p id="total-cost-display">Total Cost: $0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-plan-container">
+                <h1>Meal Plan</h1>
+                <div class="meal-plan" id="meal-plan"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="userdashboard.js"></script>
+</body>
+
+</html>
